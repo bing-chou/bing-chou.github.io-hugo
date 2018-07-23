@@ -32,7 +32,7 @@ sequenceDiagrams:
   options: ""
 
 ---
-### 交易签名
+## 交易签名
 非对称加密中会涉及到私钥和公钥的概念。我们这里称私钥为PrivKey，公钥为PubKey，需要验证的消息是message，签名为sign（由PrivKey+message得到）
 
 A向B发送消息message，B收到message，但是B怎么确认消息是A发出，并且没有经过篡改呢？利用签名就可以达到这个目的。假设A发生消息时，同时发送公钥和签名，也就是message+PubKey+sign。B接收到message+PubKey+sign，发现由message+PubKey推导的签名结果和收到的sign一致，由此确认message未经篡改。那如何知道是否是A发送呢？答案是在PubKey本身包含A的地址信息。
@@ -41,7 +41,7 @@ A向B发送消息message，B收到message，但是B怎么确认消息是A发出�
 
 当以太坊广播一笔交易时，大致就使用了上面的原理。所以保存好私钥PrivKey至关重要。
 
-### Keystore
+## Keystore
 初次使用以太坊钱包会发现，每次交易都会要求输入密码passphrase。这是由于以太坊使用了Keystore机制，本地只保存了Keystore，并未保存私钥PrivKey。当发起交易时，需要根据KeyStore+passphrase实时计算PrivKey来发起交易。这样的话，即使Keystore不小心被盗，我们的账户也能保证一定的安全。
 
 借助于[keythereum](https://github.com/ethereumjs/keythereum)库，可以帮助我们进一步理解Keystore和PrivKey的关系
