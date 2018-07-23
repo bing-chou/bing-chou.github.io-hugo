@@ -82,7 +82,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   changyanAppkey = ""       # Changyan app key
   livereUID = ""            # LiveRe UID                  # 来必力
   baidu_push = false        # baidu push                  # 百度
-  baidu_analytics = "<script> var _hmt = _hmt || []; (function() {var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?3732599b0b9fcaff18c0c25a12a40ad6"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })(); </script>"      # Baidu Analytics
+  baidu_analytics = "<script> var _hmt = _hmt || []; (function() {var hm = document.createElement('script'); hm.src = 'https://hm.baidu.com/hm.js?3732599b0b9fcaff18c0c25a12a40ad6'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s); })(); </script>"      # Baidu Analytics
   baidu_verification = ""   # Baidu Verification
   google_verification = ""  # Google_Verification         # 谷歌
 
